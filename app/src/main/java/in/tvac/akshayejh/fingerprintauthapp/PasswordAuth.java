@@ -20,8 +20,13 @@ public class PasswordAuth extends AppCompatActivity {
         KeyguardManager km = (KeyguardManager)getSystemService(KEYGUARD_SERVICE);
         if(km.isKeyguardSecure()) {
 
-            Intent i = km.createConfirmDeviceCredentialIntent("Authentication required", "password");
+
+
+            Intent i = km.createConfirmDeviceCredentialIntent("Routes App Authentication", "Confirm Fingerprint or Password to continue");
             startActivityForResult(i, CODE_AUTHENTICATION_VERIFICATION);
+
+
+
 
         }
         else
